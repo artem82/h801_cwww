@@ -7,6 +7,7 @@
 <br>WW Color Temp (Kelvin): 2000 //This depends on your leds but 2000 should be fine for warm white
 <br>CW Gpio:  4
 <br>CW Color Temp (Kelvin): 6000 //This depends on your leds but 6000 should be fine for cold white
+
 <br>Red is on GPIO15
 <br>Green is on GPIO13
 <br>Blue is on GPIO12
