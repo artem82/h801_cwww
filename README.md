@@ -14,3 +14,5 @@
 <br>White 1 (W1) is on GPIO14 is WW
 <br>White 2 (W2) is on GPIO4  is CW
 <br>There are two on board LEDs, a red one on GPIO5 and a green on GPIO 1.
+
+#### Версия 0.1
