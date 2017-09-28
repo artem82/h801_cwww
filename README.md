@@ -28,6 +28,6 @@ Red Gpio: 15
 
 ![alt text](https://image.prntscr.com/image/KlCG0ljaTKiAzxOmHpeoLQ.jpeg)
 ### Ссылки
-[Лента](https://ru.aliexpress.com/item/DC12V-SMD-5050-led-strip-double-colour-chip-flexible-light-60LEDs-m-natural-white-warm-white/32299783329.html?spm=a2g0s.9042311.0.0.jrR24m)
-http://www.iobroker.net/
+[Двуцветная Лента](https://ru.aliexpress.com/item/DC12V-SMD-5050-led-strip-double-colour-chip-flexible-light-60LEDs-m-natural-white-warm-white/32299783329.html?spm=a2g0s.9042311.0.0.jrR24m)
+<br>http://www.iobroker.net/
 
