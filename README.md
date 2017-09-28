@@ -12,11 +12,11 @@ W2 - это CW (Cool White) холодный цвет 6000 кельвинов
 <br>VCC - 12 вольт
 ### MQTT
 включение/выключение ленты
-<br>CW - true/false Холодный цвет
-<br>WW - true/false Теплый цвет 
+<br>**CW** - true/false Холодный цвет
+<br>**WW** - true/false Теплый цвет 
 <br>димирование ленты
-<br>CWbrightness значение  от 1 до 1023 Холодный цвет
-<br>WWbrightness значение  от 1 до 1023 Теплый цвет 
+<br>**CWbrightness** значение  от 0 до 1023 Холодный цвет
+<br>**WWbrightness** значение  от 0 до 1023 Теплый цвет 
 ![alt text](https://image.prntscr.com/image/KlCG0ljaTKiAzxOmHpeoLQ.jpeg)
 ### Описание GPIO
 Red Gpio: 15
