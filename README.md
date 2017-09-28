@@ -1,4 +1,5 @@
-# h801
+# h801cwww
+<br>Данный скетч управляет двуцветной led лентой на основе h801rgbww (esp8266+5 мосфетов)
 ### Описание GPIO
 <br>Red Gpio: 15
 <br>Green Gpio: 13
@@ -15,4 +16,4 @@
 <br>White 2 (W2) is on GPIO4  is CW
 <br>There are two on board LEDs, a red one on GPIO5 and a green on GPIO 1.
 
-#### Версия 0.1
+#### Версия 0.2
