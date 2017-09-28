@@ -1,14 +1,15 @@
+![alt text](https://s3-ap-southeast-1.amazonaws.com/a2.datacaciques.com/17/03/18/1azf9mf7p118g1ag/0ca268e6f8fe56e5.jpg)
 # h801_cwww
-## (h801 coolwhite+warmwhite)
+(h801 coolwhite+warmwhite)
 #### Версия 0.2
 <br>Данный скетч управляет по MQTT двуцветной led лентой на основе h801rgbww (esp8266+5 мосфетов)
 <br>Поддержка OTA
 <br>Поддержка MQTT
 ### Подключение
-W2 - это CW (Cool White) холодный цвет 6000 кельвинов 
-W1 - это WW (Warm White) желтый цвет 2700 кельвинов 
-GND - земля
-VCC - 12 вольт
+<br>W2 - это CW (Cool White) холодный цвет 6000 кельвинов 
+<br>W1 - это WW (Warm White) желтый цвет 2700 кельвинов 
+<br>GND - земля
+<br>VCC - 12 вольт
 
 ### Описание GPIO
 <br>Red Gpio: 15
