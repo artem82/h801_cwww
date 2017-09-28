@@ -26,4 +26,4 @@ VCC - 12 вольт
 <br>White 2 (W2) is on GPIO4  is CW
 <br>There are two on board LEDs, a red one on GPIO5 and a green on GPIO 1.
 
-![alt text](http://prntscr.com/gqwrif)
+![alt text](https://image.prntscr.com/image/KlCG0ljaTKiAzxOmHpeoLQ.jpeg)
