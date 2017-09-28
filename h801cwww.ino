@@ -32,7 +32,7 @@ https://github.com/instalator/Sonoff_basic_OTA
 #include <ArduinoOTA.h>         //ota
 
 const char* ssid = "ArtHome";
-const char* password = "1111111110";
+const char* password = ".........";
 const char* mqtt_server = "192.168.1.101"; //Сервер MQTT
 
 IPAddress ip(192,168,1,206); //IP модуля
