@@ -6,11 +6,10 @@
 <br>Поддержка OTA
 <br>Поддержка MQTT
 ### Подключение
-<br>W2 - это CW (Cool White) холодный цвет 6000 кельвинов 
+W2 - это CW (Cool White) холодный цвет 6000 кельвинов 
 <br>W1 - это WW (Warm White) желтый цвет 2700 кельвинов 
 <br>GND - земля
 <br>VCC - 12 вольт
-
 ### Описание GPIO
 <br>Red Gpio: 15
 <br>Green Gpio: 13
