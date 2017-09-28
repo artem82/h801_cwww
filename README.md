@@ -1,5 +1,5 @@
 # h801cwww
-##(h801 coolwhite+warmwhite)
+## (h801 coolwhite+warmwhite)
 <br>Данный скетч управляет двуцветной led лентой на основе h801rgbww (esp8266+5 мосфетов)
 ### Описание GPIO
 <br>Red Gpio: 15
