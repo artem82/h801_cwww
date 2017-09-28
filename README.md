@@ -17,7 +17,7 @@ W2 - это CW (Cool White) холодный цвет 6000 кельвинов
 <br>димирование ленты
 <br>CWbrightness значение  от 1 до 1023 Холодный цвет
 <br>WWbrightness значение  от 1 до 1023 Теплый цвет 
-
+![alt text](https://image.prntscr.com/image/KlCG0ljaTKiAzxOmHpeoLQ.jpeg)
 ### Описание GPIO
 Red Gpio: 15
 <br>Green Gpio: 13
@@ -33,8 +33,6 @@ Red Gpio: 15
 <br>White 1 (W1) is on GPIO14 is WW
 <br>White 2 (W2) is on GPIO4  is CW
 <br>There are two on board LEDs, a red one on GPIO5 and a green on GPIO 1.
-
-![alt text](https://image.prntscr.com/image/KlCG0ljaTKiAzxOmHpeoLQ.jpeg)
 ### Ссылки
 [Двуцветная лента с Али](https://ru.aliexpress.com/item/DC12V-SMD-5050-led-strip-double-colour-chip-flexible-light-60LEDs-m-natural-white-warm-white/32299783329.html?spm=a2g0s.9042311.0.0.jrR24m)
 <br>[IOBROKER](http://www.iobroker.net/)
