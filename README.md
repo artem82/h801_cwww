@@ -14,7 +14,7 @@ W2 - это CW (Cool White) холодный цвет 6000 кельвинов
 включение/выключение ленты
 <br>**CW** - true/false Холодный цвет
 <br>**WW** - true/false Теплый цвет 
-<br>димирование ленты
+<br>диммирование ленты
 <br>**CWbrightness** значение  от 0 до 1023 Холодный цвет
 <br>**WWbrightness** значение  от 0 до 1023 Теплый цвет 
 ![alt text](https://image.prntscr.com/image/KlCG0ljaTKiAzxOmHpeoLQ.jpeg)
@@ -36,4 +36,5 @@ Red Gpio: 15
 ### Ссылки
 [Двуцветная лента с Али](https://ru.aliexpress.com/item/DC12V-SMD-5050-led-strip-double-colour-chip-flexible-light-60LEDs-m-natural-white-warm-white/32299783329.html?spm=a2g0s.9042311.0.0.jrR24m)
 <br>[IOBROKER](http://www.iobroker.net/)
+<br>https://github.com/instalator/Sonoff_basic_OTA
 
