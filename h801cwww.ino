@@ -23,7 +23,7 @@ There are two on board LEDs, a red one on GPIO5 and a green on GPIO 1.
 
 https://github.com/instalator/Sonoff_basic/blob/master/main.ino
 https://github.com/instalator/Sonoff_basic_OTA
- *  VER 0.2
+ *  VER 0.4
  */
 
 #include <ESP8266WiFi.h> 
@@ -32,9 +32,10 @@ https://github.com/instalator/Sonoff_basic_OTA
 #include <ArduinoOTA.h>         //ota
 
 const char* ssid = "ArtHome";
-const char* password = ".........";
+const char* password = "1111111110";
 const char* mqtt_server = "192.168.1.101"; //Сервер MQTT
 
+const char* ipESP = "192.168.1.206";  // ip модуля для mqtt
 IPAddress ip(192,168,1,206); //IP модуля
 IPAddress gateway(192,168,1,1); // шлюз
 IPAddress subnet(255,255,255,0); // маска
@@ -54,14 +55,14 @@ PubSubClient client(espClient);
 #define LEDg    1
 #define LEDr    5
 #define REDc    15
-#define GREENc  13
+#define GREENc  13  //GREENc = CW = W2
 #define BLUEc   12
 #define WW      14  //W1   2700
 #define CW      4   //W2   6500
 
 int CWvalue,WWvalue;  //шим от 0 до 1023
 
-long previousMillis = 0;
+long previousMillis = 0;  //состояние для delay
 
 void setup_wifi() {
   delay(10);
@@ -85,6 +86,8 @@ void reconnect() {
       client.publish("iobroker/ESP06Light/WWbrightness", "0");
       client.publish("iobroker/ESP06Light/CW", "false");
       client.publish("iobroker/ESP06Light/CWbrightness", "0");
+      client.publish("iobroker/ESP06Light/ver", "0.4");
+      client.publish("iobroker/ESP06Light/wanIP", ipESP);
       client.subscribe("iobroker/ESP06Light/#");
       digitalWrite(LEDg, HIGH);
     } else {
@@ -103,6 +106,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
   if (strTopic == "iobroker/ESP06Light/WWbrightness"){
     WWvalue = strPayload.toInt();        
     analogWrite(WW, WWvalue);
+    analogWrite(REDc, WWvalue);
     if (strPayload.toInt() > 0){
        client.publish("iobroker/ESP06Light/WW", "true");
     } else {
@@ -115,6 +119,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
   if (strTopic == "iobroker/ESP06Light/CWbrightness"){
     CWvalue = strPayload.toInt();        
     analogWrite(CW, CWvalue);
+    analogWrite(GREENc, CWvalue);  //так как только CW и WW
      if (strPayload.toInt() > 0){
        client.publish("iobroker/ESP06Light/CW", "true");
     } else {
@@ -128,10 +133,12 @@ void callback(char* topic, byte* payload, unsigned int length) {
   if (strTopic == "iobroker/ESP06Light/WW"){
     if (strPayload == "true"){       
         analogWrite(WW, WWvalue);
+        analogWrite(REDc, WWvalue);
     } 
     if(strPayload == "false"){
         WWvalue = 0;
         analogWrite(WW, WWvalue);
+        analogWrite(REDc, WWvalue);
     }
     client.publish("iobroker/ESP06Light/WWbrightness", String(WWvalue).c_str());
     client.publish("iobroker/ESP06Light/WW", IntToBool(digitalRead(WW)));
@@ -141,10 +148,12 @@ void callback(char* topic, byte* payload, unsigned int length) {
     if (strPayload == "true"){
         //digitalWrite(CW, HIGH);
         analogWrite(CW, CWvalue);
+        analogWrite(GREENc, CWvalue);  //так как только CW и WW
     }
     if(strPayload == "false"){
         CWvalue = 0;
         analogWrite(CW, CWvalue);
+        analogWrite(GREENc, CWvalue); // GREENc = CW
     }
     client.publish("iobroker/ESP06Light/CWbrightness", String(CWvalue).c_str());
     client.publish("iobroker/ESP06Light/CW", IntToBool(digitalRead(CW)));
@@ -163,7 +172,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 /*******************************************/
 
 void setup() {
-  pinMode(LEDg, OUTPUT);
+  //pinMode(LEDg, OUTPUT);
   pinMode(REDc, OUTPUT);
   pinMode(GREENc, OUTPUT);
   pinMode(BLUEc, OUTPUT); 
@@ -216,18 +225,19 @@ char* IntToBool (int r) {
 /*******************************************/
 
 void loop() {
-
-ArduinoOTA.handle();
- 
+  
+  ArduinoOTA.handle(); 
   if (!client.connected()){
     reconnect();
-  } 
-  
+  }   
   client.loop(); 
   //h801start();  
   
-
-delay(1000);  
+ if (millis() - previousMillis > 1000) {
+ previousMillis = millis();
+ // пусто
+ }
+  
 }  //end void loop
 
 void h801start() {
