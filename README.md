@@ -1,7 +1,7 @@
 ![alt text](https://www.picclickimg.com/00/s/MTAwMVgxMDAx/z/AsYAAOSwWxNY02rS/$/RGB-LED-Strip-Light-WIFI-Controller-Dimmer-Andriod-_1.jpg)
 # h801_cwww
 (h801 coolwhite+warmwhite)
-#### Версия 0.2
+#### Версия 0.4
 Данный скетч управляет по MQTT двуцветной led лентой на основе h801rgbww (esp8266+5 мосфетов)
 <br>Поддержка OTA
 <br>Поддержка MQTT
